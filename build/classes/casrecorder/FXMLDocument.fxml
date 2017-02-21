@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="478.0" prefWidth="462.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="casrecorder.FXMLDocumentController">
+    <children>
+      <FlowPane layoutY="3.0" prefHeight="506.0" prefWidth="462.0">
+         <children>
+            <FlowPane id="heading" prefHeight="68.0" prefWidth="460.0">
+               <children>
+                  <Label prefHeight="68.0" prefWidth="459.0" style="-fx-font-size: 25; -fx-font-family: new;" text="CasRecorder" />
+               </children>
+            </FlowPane>
+            <FlowPane alignment="TOP_CENTER" prefHeight="219.0" prefWidth="460.0">
+               <children>
+                  <Label prefHeight="15.0" prefWidth="431.0" text="Browser" />
+                  <FlowPane alignment="CENTER" prefHeight="26.0" prefWidth="458.0">
+                     <children>
+                        <TextField prefHeight="25.0" prefWidth="371.0" />
+                        <Button mnemonicParsing="false" text="Button" />
+                     </children>
+                  </FlowPane>
+                  <SplitPane dividerPositions="0.28438228438228436" prefHeight="162.0" prefWidth="431.0">
+                    <items>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0" />
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="192.0" prefWidth="242.0" />
+                    </items>
+                  </SplitPane>
+               </children>
+            </FlowPane>
+            <TabPane prefHeight="200.0" prefWidth="460.0" tabClosingPolicy="UNAVAILABLE">
+              <tabs>
+                <Tab text="Play / Record">
+                  <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="85.0" prefWidth="460.0">
+                           <children>
+                              <Text layoutX="36.0" layoutY="28.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" wrappingWidth="203.7294921875" />
+                              <TextFlow layoutX="36.0" layoutY="41.0" prefHeight="26.0" prefWidth="403.0">
+                                 <children>
+                                    <Slider prefHeight="16.0" prefWidth="276.0" />
+                                    <Label text="00:00:00/00:00:00" />
+                                 </children>
+                              </TextFlow>
+                              <ToolBar layoutX="-3.0" layoutY="124.0" prefHeight="40.0" prefWidth="460.0">
+                                <items>
+                                      <Button fx:id="button" onAction="#handleButtonAction" text="Play" />
+                                  <Button mnemonicParsing="false" text="Stop" />
+                                    <Button mnemonicParsing="false" text="Record" />
+                                </items>
+                              </ToolBar>
+                           </children>
+                        </AnchorPane>
+                  </content>
+                </Tab>
+                  <Tab text="Output">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="286.0" prefWidth="460.0">
+                           <children>
+                              <MenuButton layoutX="11.0" layoutY="13.0" mnemonicParsing="false" text="Local Storage">
+                                <items>
+                                  <MenuItem mnemonicParsing="false" text="Google Drive" />
+                                    <MenuItem mnemonicParsing="false" text="FTP" />
+                                  <MenuItem mnemonicParsing="false" text="SFTP" />
+                                </items>
+                              </MenuButton>
+                           </children>
+                        </AnchorPane>
+                     </content>
+                  </Tab>
+                <Tab text="Audio Details">
+                  <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="286.0" prefWidth="460.0" />
+                  </content>
+                </Tab>
+              </tabs>
+            </TabPane>
+            <Accordion />
+         </children>
+      </FlowPane>
+        <Label fx:id="label" layoutX="-331.0" layoutY="-47.0" minHeight="16" minWidth="69" />
+    </children>
+</AnchorPane>
